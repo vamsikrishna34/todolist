@@ -1,0 +1,81 @@
+
+:root {
+  --bs-body-bg: #ffffff;
+  --bs-body-color: #212529;
+  --bs-card-bg: #ffffff;
+  --border-color: #e9ecef;
+}
+
+[data-theme="dark"] {
+  --bs-body-bg: #121212;
+  --bs-body-color: #e0e0e0;
+  --bs-card-bg: #1e1e1e;
+  --border-color: #333333;
+}
+
+body {
+  background-color: var(--bs-body-bg) !important;
+  color: var(--bs-body-color) !important;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card {
+  background-color: var(--bs-card-bg) !important;
+  border-color: var(--border-color) !important;
+}
+
+.card-header {
+  background-color: rgba(0,0,0,0.03);
+  border-bottom-color: var(--border-color) !important;
+}
+
+[data-theme="dark"] .card-header {
+  background-color: rgba(255,255,255,0.03);
+}
+
+.form-control,
+.form-select {
+  background-color: var(--bs-card-bg);
+  color: var(--bs-body-color);
+  border-color: var(--border-color);
+}
+
+.form-control:focus {
+  background-color: var(--bs-card-bg);
+  color: var(--bs-body-color);
+}
+
+/* Task item styling */
+.task-item {
+  transition: all 0.25s ease;
+  border-radius: 8px !important;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--border-color);
+}
+
+.task-item.completed .task-title {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.task-actions .btn {
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.task-actions .btn:hover {
+  opacity: 1;
+}
+
+/* Empty state */
+#empty-message {
+  display: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  .container {
+    padding: 1rem;
+  }
+}
