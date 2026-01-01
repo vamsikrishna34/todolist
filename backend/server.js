@@ -80,7 +80,7 @@ app.get('/health', (req, res) => {
   res.json({ status: 'OK', uptime: process.uptime() });
 });
 
-// 🚀 Start server
+//  Start server
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
   console.log(`→ Try: GET http://localhost:${PORT}/api/tasks`);
